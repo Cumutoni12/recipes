@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from "react";
+import Rating from "./Rating";
+import Recipe from "./Recipe";
 
 function Categories() {
   const [categoriez, setcategories] = useState([]);
@@ -17,7 +19,7 @@ function Categories() {
     )
       .then((response) => response.json())
       .then((data) => setRecipes(data.meals));
-  });
+  }, [selectCategory]);
   const handleSelectedCategory = (e) => setSelectedCategory(e.target.value);
 
   return (
@@ -25,7 +27,7 @@ function Categories() {
       <h1> My favorite Recipes </h1>
       <label htmlFor="selectCategory">Select categories</label>
       <select
-        id="lectCategory"
+        id="selectCategory"
         value={selectCategory}
         onChange={handleSelectedCategory}
       >
@@ -36,6 +38,10 @@ function Categories() {
           </option>
         ))}
       </select>
+       {recipes.map(recipe=>(
+      <Recipe data={recipe}/>
+    ))} 
+      
     </div>
   );
 }
