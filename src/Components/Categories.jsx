@@ -24,7 +24,7 @@ function Categories() {
 
   return (
     <div>
-      <h1> My favorite Recipes </h1>
+      <h1 className="text-4xl"> My favorite Recipes </h1>
       <label htmlFor="selectCategory">Select categories</label>
       <select
         id="selectCategory"
