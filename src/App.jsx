@@ -3,7 +3,7 @@ import Categories from "./Components/Categories";
 
 function App() {
   return (
-    <div className="bg-red-600">
+    <div className="bg-gray-300 py-4 min-h-screen">
       <Categories />
     </div>
   );

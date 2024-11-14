@@ -5,7 +5,7 @@ function Rating() {
   const handleRating = (e) => setRating(e.target.value);
   return (
     <div>
-      <p> {rating || "Please select a Rating"}</p>
+      <p className="text-xl font-medium bg-yellow-50 "> {rating || "Please select a Rating"}</p>
       <select value={rating} onChange={handleRating}>
         <option> Please select a Rating</option>
         <option value="👍👍"> Fatantistic</option>
